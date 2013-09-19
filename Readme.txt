@@ -1,7 +1,7 @@
-=== Plugin Name ===
+=== Date Translate ===
 Contributors: gezimb
 Donate link:
-Tags: comments, spam
+Tags: date translation, translation, local language, dates, time, time and date
 Requires at least: 3.0.1
 Tested up to: 3.6.1
 Stable tag: 4.3
@@ -29,6 +29,8 @@ It then searches for the English versions and replaces them.
 4. Repeat procedure for months and shorthand (Jan, Feb, ...)
 5. Finalize by hooking `<?php qnt_date_translate($days,$months,$months_shorthand)?>` - of course, replace array names with your own.
 
+Examples at plugin GitHub page.
+
 == Frequently Asked Questions ==
 
 = Does the week begin with Sunday? =
@@ -42,4 +44,4 @@ There is no need, date formats take full day name and use shorthand for months.
 == Changelog ==
 
 = 1.0 =
-* Change the language
+* Allows translating by inserting the hook on functions.php
