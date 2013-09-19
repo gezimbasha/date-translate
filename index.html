@@ -1,36 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Date Translate : Translate WordPress dates with a single line of code." />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Date Translate by gezimbasha</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Date Translate</title>
   </head>
-
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/gezimbasha/date-translate">View on GitHub</a>
+      <header>
+        <h1>Date Translate</h1>
+        <p>Translate WordPress dates with a single line of code.</p>
+      </header>
 
-          <h1 id="project_title">Date Translate</h1>
-          <h2 id="project_tagline">Translate WordPress dates with a single line of code.</h2>
+      <div id="banner">
+        <span id="logo"></span>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/gezimbasha/date-translate/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/gezimbasha/date-translate/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <a href="https://github.com/gezimbasha/date-translate" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/gezimbasha/date-translate/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/gezimbasha/date-translate/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
         <h3>
 <a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h3>
 
@@ -43,6 +51,8 @@
 
 <p>Create three separate arrays for the days, months and shorthand for months; I will use my native language <em>Albanian</em> to demonstrate functionality.</p>
 
+<p>Insert the following in your <em>functions.php</em> file.</p>
+
 <pre><code>$ditet = array(Diele, Hëne, Marte, Mërkure, Enjte, Premte, Shtunë);
 $muajt = array(Janar, Shkurt, Mars, Prill, Maj, Qërshor, Korrik, Gusht, Shtator, Tetor, Nëntor, Dhjetor);
 $muajt_s = array(Jan, Shk, Mar, Pri, Maj, Qer, Korr, Gusht, Shtat, Tet, Nen, Dhjetor);
@@ -50,7 +60,11 @@ $muajt_s = array(Jan, Shk, Mar, Pri, Maj, Qer, Korr, Gusht, Shtat, Tet, Nen, Dhj
 qnt_date_translate($ditet, $muajt, $muajt_s);
 </code></pre>
 
-<p>Place this snippet in your code and voila.</p>
+<p>Be very careful,</p>
+
+<blockquote>
+<p>Week starts with Sunday, ends with Saturday.</p>
+</blockquote>
 
 <h3>
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
@@ -62,16 +76,12 @@ qnt_date_translate($ditet, $muajt, $muajt_s);
 
 <p>Please submit an issue if the plugin is not working for you, and submit pull requests if you want to contribute.</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Date Translate maintained by <a href="https://github.com/gezimbasha">gezimbasha</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/gezimbasha">gezimbasha</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -82,7 +92,6 @@ qnt_date_translate($ditet, $muajt, $muajt_s);
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
